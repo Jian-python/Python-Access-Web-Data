@@ -1,0 +1,46 @@
+Q1. Which of the following best describes "Regular Expressions"?
+A1: a small programming language unto itself
+
+Q2 What will the '\$' regular expression match?
+A2: A dollar sign
+
+Q3: What would the following mean in a regular expression? [a-z0-9]
+A3: Match a lowercase letter or a digit
+
+Q4. What is the type of the return value of the re.findall() method?
+A4vlist of strings
+
+Q5. What is the "wild card" character in
+a regular expression (i.e., the character that matches any character)?
+A5 .
+
+Q6. What is the difference between the "+" and "*"
+character in regular expressions?
+A6 The "+" matches at least one character and the "*" matches zero or more characters
+
+Q7. What does the "[0-9]+" match in a regular expression?
+A7 one or more digits
+
+Q8. What does the following Python sequence print out?
+
+x = 'From: Using the : character'
+y = re.findall('^F.+:', x)
+print(y)
+
+A8 ['From: Using the :']
+
+Q9. What character do you add to the "+" or "*" to indicate
+that the match is to be done in a non-greedy manner?
+A9 non greedy it would be +?
+
+Q10. Given the following line of text:
+From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+What would the regular expression '\S+?@\S+' match?
+
+code:
+import re
+sentence = "From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008"
+y = re.findall("\S+?@\S+", sentence)
+print(y)
+
+A10 stephen.marquard@uct.ac.za
