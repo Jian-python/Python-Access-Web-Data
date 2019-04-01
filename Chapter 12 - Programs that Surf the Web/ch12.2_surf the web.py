@@ -66,3 +66,23 @@ print('7. web scraping')
 
 print('web scrawling or spidering the web:','\n','search engines scrape web pages', sep='')
 print('#####################################################')
+print('8. beautiful soup')
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
+
+url = input('Enter - ')
+html = urllib.request.urlopen(url).read()
+# .read() read all lines include newline at end of each line, and all come into a big string
+soup = BeautifulSoup(html, 'html.parser')
+# parse: clean up nasty html into tree
+# restrieve all of the anchor tags
+tags = soup('a')
+# find out all the tag <a xxxxxxxx </a>
+for tag in tags:
+    print(tag.get('href', None))
+# input:
+# Enter - >? http://www.dr-chuck.com/page1.htm
+# output:
+# http://www.dr-chuck.com/page2.htm
+
+#  try more complex one: http://www.dr-chuck.com 
