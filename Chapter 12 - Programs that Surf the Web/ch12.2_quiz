@@ -1,0 +1,220 @@
+1. 第 1 个问题
+Which of the following Python data structures is most similar to the value returned in this line of Python:
+
+x = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+
+list
+dictionary
+file handle
+socket
+regular expression
+
+Answer: file handle
+
+
+2. 第 2 个问题
+In this Python code, which line actually reads the data?
+
+import socket
+
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4e.org', 80))
+cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\n\n'.encode()
+mysock.send(cmd)
+--
+while True:
+    data = mysock.recv(512)
+    if (len(data) < 1):
+        break
+    print(data.decode())
+mysock.close()
+--
+mysock.recv()
+socket.socket()
+mysock.close()
+mysock.connect()
+mysock.send()
+
+Answer:mysock.recv()
+
+
+3. 第 3 个问题
+Which of the following regular expressions would extract the URL from this line of HTML:
+
+--
+<p>Please click <a href="http://www.dr-chuck.com">here</a></p>
+--
+
+href="(.+)"
+href=".+"
+http://.*
+<.*>
+
+Answer: href="(.+)"
+
+
+!!  4. 第 4 个问题
+In this Python code, which line is most like the open() call to read a file:
+--
+import socket
+
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4e.org', 80))
+cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\n\n'.encode()
+mysock.send(cmd)
+
+while True:
+    data = mysock.recv(512)
+    if (len(data) < 1):
+        break
+    print(data.decode())
+mysock.close()
+--
+
+mysock.connect()
+import socket
+mysock.recv()
+mysock.send()
+socket.socket()
+
+Answer: mysock.connect()
+
+
+!!  5. 第 5 个问题
+Which HTTP header tells the browser the kind of document that is being returned?
+
+HTML-Document:
+Content-Type:
+Document-Type:
+ETag:
+Metadata:
+
+Answer: Content-Type:
+
+
+6. 第 6 个问题
+What should you check before scraping a web site?
+
+That the web site returns HTML for all pages
+That the web site allows scraping
+That the web site supports the HTTP GET command
+That the web site only has links within the same site
+
+Answer: That the web site allows scraping
+
+
+7. 第 7 个问题
+What is the purpose of the BeautifulSoup Python library?
+
+It optimizes files that are retrieved many times
+It animates web operations to make them more attractive
+It repairs and parses HTML to make it easier for a program to understand
+It builds word clouds from web pages
+It allows a web site to choose an attractive skin
+
+Answer: It repairs and parses HTML to make it easier for a program to understand
+
+
+8. 第 8 个问题
+What ends up in the "x" variable in the following code:
+
+
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html, 'html.parser')
+x = soup('a')
+
+
+A list of all the anchor tags (<a..) in the HTML from the URL
+True if there were any anchor tags in the HTML from the URL
+All of the externally linked CSS files in the HTML from the URL
+All of the paragraphs of the HTML from the URL
+
+
+Answer: A list of all the anchor tags (<a..) in the HTML from the URL
+
+
+What is the most common Unicode encoding when moving data between systems?
+
+
+UTF-32
+UTF-128
+UTF-64
+UTF-16
+UTF-8
+
+Answer: UTF-8
+
+
+10. 第 10 个问题
+What is the ASCII character that is associated with the decimal value 42?
+
+!
+^
+/
+*
++
+
+Answer: *
+print(ord('+'))
+43
+print(ord('/'))
+47
+print(ord('?'))
+63
+print(ord('*'))
+42
+print(ord('!'))
+33
+
+
+11. 第 11 个问题
+What word does the following sequence of numbers represent in ASCII:
+
+108, 105, 110, 101
+
+
+tree
+lost
+func
+line
+ping
+
+Answer: line
+print(chr(108))
+l
+print(chr(105))
+i
+print(chr(110))
+n
+print(chr(101))
+e
+
+
+12. 第 12 个问题
+How are strings stored internally in Python 3?
+
+
+Unicode
+EBCDIC
+ASCII
+UTF-8
+Byte Code
+
+Answer: Unicode
+reference：
+Unicode https://timothybramlett.com/Strings_Bytes_and_Unicode_in_Python_2_and_3.html
+                                                                                                                          
+
+
+
+13. 第 13 个问题
+When reading data across the network (i.e. from a URL) in Python 3, what method must be used to convert it to the internal format used by strings?
+
+
+trim()
+upper()
+encode()
+decode(）
+find()
+
+Answer: decode(）
