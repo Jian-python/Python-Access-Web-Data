@@ -50,7 +50,29 @@ Retrieving: http://python-data.dr-chuck.net/known_by_Anayah.html
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 
-tick = 0
+tock = 0
+url = input('Enter URL: ')
+count = input('Enter count: ')
+position = input('Enter position: ')
+
+
+
+
+while tock < int(count):
+    print('Retrieving: ', url)
+    web = urllib.request.urlopen(url).read()
+    soups = BeautifulSoup(web, 'html.parser')
+    url = soups('a')[int(position) -1].get('href', None)
+    tock = tock + 1
+
+print('Last name found: ', url)
+
+''' or the other way:
+
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
+
+
 tock = 0
 count = 4
 position = 3
@@ -61,8 +83,14 @@ url = 'http://python-data.dr-chuck.net/known_by_Fikret.html'
 while tock < count:
     web = urllib.request.urlopen(url).read()
     soups = BeautifulSoup(web, 'html.parser')
-    url = soups('a')[position -1].get('href', None)
-    print('Retrieving: ', url)
+    tick = 0
+    for soup in soups:
+        tick = tick + 1
+        if tick == position - 1:
+            url = soups('a')[tick].get('href', None)
+            print('Retrieving: ', url)
     tock = tock + 1
 
 print('Last name found: ', url)
+
+'''
