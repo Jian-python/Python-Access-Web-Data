@@ -1,0 +1,95 @@
+1. 第 1 个问题
+What is "serialization" when we are talking about web services?
+
+
+The act of taking data stored in a program and formatting it so it can be sent across the network
+
+
+Making it so that dictionaries can maintain their keys in sorted order
+
+
+Sorting all the data stored in a tuple
+
+
+Marking each network packet so it can be put back into order on the receiving system
+
+
+
+
+2. 第 2 个问题
+Which of the following are not commonly used serialization formats?
+
+
+Dictionaries
+
+
+TCP
+
+
+JSON
+
+
+XML
+
+
+HTTP
+
+
+
+
+3. 第 3 个问题
+In this XML, which are the "simple elements"?
+
+
+<people>
+    <person>
+       <name>Chuck</name>
+       <phone>303 4456</phone>
+    </person>
+    <person>
+       <name>Noah</name>
+       <phone>622 7421</phone>
+    </person>
+</people>
+
+people
+
+
+Noah
+
+
+name
+
+
+phone
+
+
+person
+
+
+
+4. 第 4 个问题
+In the following XML, which are attributes?
+
+
+<person>
+  <name>Chuck</name>
+  <phone type="intl">
+     +1 734 303 4456
+  </phone>
+  <email hide="yes" />
+</person>
+
+type
+
+
+hide
+
+
+email
+
+
+person
+
+
+name
