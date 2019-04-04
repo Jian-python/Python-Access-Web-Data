@@ -51,3 +51,21 @@ Retrieved 4204 characters
 Count: 50
 Sum: 2...
 '''
+
+import urllib.request, urllib.parse, urllib.error
+import xml.etree.ElementTree as ET
+
+url = input('Enter location: ')
+print('Retrieving', url)
+data = urllib.request.urlopen(url).read()
+print('Retrieved', len(data), 'characters')
+
+tree = ET.fromstring(data)
+sum = 0
+lst = tree.findall('comments/comment')
+print('users count:', len(lst))
+for item in lst:
+
+    # print('Name:', item.find('name').text)
+    sum = sum+ int(str(item.find('count').text))
+print(sum)
