@@ -1,0 +1,149 @@
+Created by Jian Chueng
+1. 第 1 个问题
+Who is credited with the REST approach to web services?
+
+
+Vint Cerf
+Roy Fielding
+Bjarne Stroustrup
+Daphne Koller
+Leonard Klienrock
+
+Answer: Roy Fielding
+
+
+2. 第 2 个问题
+What Python library do you have to import to parse and handle JSON?
+
+
+import re
+import json
+BeautifulSoup
+ElementTree
+
+Answer: import json
+
+
+3. 第 3 个问题
+What is the method used to parse a string containing JSON data so that you can work with the data in Python?
+
+
+json.loads()
+json.read()
+json.parse()
+json.connect()
+
+Answer: json.loads()
+
+
+4. 第 4 个问题
+What kind of variable will you get in Python when the following JSON is parsed:
+
+
+ "id" : "001",
+  "x" : "2",
+  "name" : "Chuck"
+
+A list of tuples
+A dictionary with three key / value pairs
+A list with six items
+A tuple with three items
+A list with three items
+
+Answer: A dictionary with three key / value pairs
+
+
+5. 第 5 个问题
+Which of the following is not true about the service-oriented approach?
+
+
+Standards are developed where many pairs of applications must work together
+An application runs together all in one place
+An application makes use of the services provided by other applications
+Web services and APIs are used to transfer data between applications
+
+Answer: An application runs together all in one place
+
+
+6. 第 6 个问题
+If the following JSON were parsed and put into the variable x,
+
+
+{
+    "users": [
+        {
+            "status": {
+                "text": "@jazzychad I just bought one .__.",
+             },
+             "location": "San Francisco, California",
+             "screen_name": "leahculver",
+             "name": "Leah Culver",
+         },
+   ...
+ 
+what Python code would extract "Leah Culver" from the JSON?
+
+
+x->name
+x["users"]["name"]
+x[0]["name"]
+x["users"][0]["name"]
+x["name"]
+
+Answer: x["users"][0]["name"] 
+ 
+
+7. 第 7 个问题
+What library call do you make to append properly encoded parameters to the end of a URL like the following:
+ 
+http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=Ann+Arbor%2C+MI
+ 
+ 
+ 
+re.match()
+urllib.urlcat()
+urllib.parse.urlencode()
+re.encode()
+
+Answer: urllib.parse.urlencode()
+
+
+
+8. 第 8 个问题
+What happens when you exceed the Google geocoding API rate limit?
+
+
+You canot use the API until you respond to an email that contains a survey question
+The API starts to perform very slowly
+Your application starts to perform very slowly
+You cannot use the API for 24 hours
+
+Answer:You cannot use the API for 24 hours
+
+
+9. 第 9 个问题
+What protocol does Twitter use to protect its API?
+
+
+SOAP
+SHA1-MD5
+PKI-HMAC
+OAuth
+WS*Security
+Java Web Tokens
+
+
+Answer: OAuth
+
+
+10. 第 10 个问题
+What header does Twitter use to tell you how many more API requests you can make before you will be rate limited?
+
+
+x-max-requests
+content-type
+x-rate-limit-remaining
+x-request-count-down
+
+
+Answer: x-rate-limit-remaining
